@@ -1,8 +1,7 @@
 <?php
-require_once 'session.php';
-$sessiontus=false;
-$sessionuser='';
-$sessionname="";
+session_start();
+session_unset();
+session_destroy();
 header("Location: indexmanage.php");
 exit();
 ?>

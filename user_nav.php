@@ -17,7 +17,7 @@
     </span>
     
     <span id="logintus">
-        <span>Chào <?php require_once 'session.php'; echo $sessionname; ?></span>
+        <span>Chào <?php echo $sessionname; ?></span>
         <span><img src="" alt=""></span>
         <span id="logincontent"><a href="logout.php">Log out</a></span>
         <span class="bar"><a href="index.php">ATN shop</a></span>

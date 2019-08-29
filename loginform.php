@@ -14,10 +14,10 @@ if (isset($_POST['login_btn'])) {
         $count=$result->fetchColumn();
         $row=$result->fetch_assoc();
         if ($count > 0) {
-            require_once 'session.php';
-            $sessiontus=true;
-            $sessionuser=$user;
-            $sessionname=$row['uname'];
+            session_start();
+            $_SESSION['user'] = $row['username'];
+            $_SESSION['pass'] = $row['passwd'];
+            $_SESSION['name']= $row['uname'];
             header("Location: managepage.php"); //go to index.php
             exit();
         } else {

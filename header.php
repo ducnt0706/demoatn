@@ -1,4 +1,6 @@
-
+<?php
+session_start();
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -12,10 +14,10 @@
 <body>
 <?php
 require_once './SetUp/functions.php';
-require_once 'session.php';
 //check login status to show header
-if($sessiontus==true){
+if(isset($_SESSION['user'])){
     //if is login
+    $sessionname=$_SESSION['name'];
     require_once 'user_nav.php';
 }else{
     //if isn't login
