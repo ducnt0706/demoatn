@@ -1,5 +1,6 @@
 
 <?php
+$login=false;
 $msg="";
 if (isset($_POST['login_btn'])) {
     require_once '.\SetUp\functions.php';
@@ -13,13 +14,11 @@ if (isset($_POST['login_btn'])) {
         $result = doQuery("SELECT * FROM account WHERE username = '$user' AND passwd = '$token' ");
         $count=$result->fetchColumn();
         if ($count > 0) {
-            session_start();
-            $_SESSION['user'] = $result->fetch_object()['username'];
-            $_SESSION['pass'] = $result->fetch_object()['passwd'];
-            $_SESSION['name']= $result->fetch_object()['uname'];
+            $login=true;
             header("Location: managepage.php"); //go to index.php
             exit();
         } else {
+            $login=false;
             $msg = "Username or Password is incorrect!";
             header("Location: indexmanage.php");
         }
