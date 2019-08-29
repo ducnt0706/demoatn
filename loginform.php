@@ -14,9 +14,9 @@ if (isset($_POST['login_btn'])) {
         $count=$result->fetchColumn();
         if ($count > 0) {
             session_start();
-            $_SESSION['user'] = $result->fetch_row()['username'];
-            $_SESSION['pass'] = $result->fetch_row()['passwd'];
-            $_SESSION['name']= $result->fetch_row()['uname'];
+            $_SESSION['user'] = $result->fetch_object()['username'];
+            $_SESSION['pass'] = $result->fetch_object()['passwd'];
+            $_SESSION['name']= $result->fetch_object()['uname'];
             header("Location: managepage.php"); //go to index.php
             exit();
         } else {
