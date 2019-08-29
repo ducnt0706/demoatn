@@ -67,7 +67,7 @@
                 $mscat=$_POST['catid'];
                 $query="SELECT name FROM catalogue WHERE catid='$mscat'";
                 $result=doQuery($query);
-                $namecat=mysqli_fetch_assoc($result)['name'];
+                $namecat=pg_fetch_assoc($result)['name'];
                 echo"<h3>$namecat</h3>";
 
             }
