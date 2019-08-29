@@ -67,9 +67,10 @@
                 $mscat=$_POST['catid'];
                 $query="SELECT name FROM catalogue WHERE catid='$mscat'";
                 $result=doQuery($query);
-                $namecat=pg_fetch_assoc($result)['name'];
-                echo"<h3>$namecat</h3>";
-
+                foreach($result as $row){
+                    $namecat=$row['name'];
+                    echo"<h3>$namecat</h3>";
+                }
             }
 
             ?>
