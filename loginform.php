@@ -11,17 +11,18 @@ if (isset($_POST['login_btn'])) {
     } else {
         $token = passwordToToken($pass);
         $result = doQuery("SELECT * FROM account WHERE username = '$user' AND passwd = '$token' ");
-        $row=pg_fetch_assoc($result);
-        if ($result->num_rows == 0) {
-            $msg = "Username or Password is incorrect!";
-            header("Location: indexmanage.php");
-        } else {
+        $count=$result->fetchColumn();
+        $row=$result->fetch_assoc();
+        if ($count > 0) {
             require_once 'session.php';
             $sessiontus=true;
             $sessionuser=$user;
             $sessionname=$row['uname'];
             header("Location: managepage.php"); //go to index.php
             exit();
+        } else {
+            $msg = "Username or Password is incorrect!";
+            header("Location: indexmanage.php");
         }
     }
 }
