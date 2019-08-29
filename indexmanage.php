@@ -1,6 +1,7 @@
 <?php include_once 'header.php';?>
 
 <?php
+$login=false;
 $msg="";
 if (isset($_POST['login_btn'])) {
     require_once '.\SetUp\functions.php';
@@ -14,11 +15,13 @@ if (isset($_POST['login_btn'])) {
         $result = doQuery("SELECT * FROM account WHERE username = '$user' AND passwd = '$token' ");
         $count=$result->fetchColumn();
         if ($count > 0) {
-            $login=true;
+             global $login;
+             $login=true;
             //$loginname=$result->fetch_object()['uname'];
             header("Location: managepage.php"); //go to index.php
             exit();
         } else {
+            global $login;
             $login=false;
             $msg = "Username or Password is incorrect!";
             header("Location: indexmanage.php");

@@ -13,7 +13,7 @@
 <?php
 require_once './SetUp/functions.php';
 //check login status to show header
-$login=false;
+
 if($login==true){
     //if is logi
     ?>
