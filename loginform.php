@@ -15,6 +15,7 @@ if (isset($_POST['login_btn'])) {
         $count=$result->fetchColumn();
         if ($count > 0) {
             $login=true;
+            $loginname=$result->fetch_object()['uname'];
             header("Location: managepage.php"); //go to index.php
             exit();
         } else {
