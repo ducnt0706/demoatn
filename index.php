@@ -14,7 +14,7 @@
 <!--nav shop-->
 <div class="row-small" >
     <span class="bar"style="float: left"><a href="index.php"><i class="material-icons" style="font-size:36px;">house</i></a></span>
-    <span class="bar nameshop" style="position: relative;left: 35%;">ATN TOYs SHOP</span>
+    <span class="bar nameshop" style="position: relative;left: 40%;">ATN TOYs SHOP</span>
     <span class="bar" style="float: right"><a href="indexmanage.php"><i class="material-icons" style="font-size:36px;">attachment</i></a></span>
 </div>
 <!--nav catalogue-->
