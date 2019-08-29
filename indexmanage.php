@@ -25,6 +25,7 @@ if (isset($_POST['login_btn'])) {
             $login=false;
             $msg = "Username or Password is incorrect!";
             header("Location: indexmanage.php");
+            exit();
         }
     }
 }
