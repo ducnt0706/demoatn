@@ -43,7 +43,7 @@
     <div style="color: white;position: relative;top:25%;left:5%">
         <h2>Bring the world of toys to your room!!</h2>
         <h5>Let us make your childhood become beautiful</h5>
-        <button class="btnspec">Buy Now!!</button>
+        <button  class="btnspec"><a href="#buycontent"></a>Buy Now!!</button>
     </div>
 </div>
 </div>
@@ -52,7 +52,7 @@
 
 <!--load product-->
 
-<div class="row3">
+<div class="row3" id="buycontent">
     <!--section arrange-->
     <div class="column-14">
         <div class="mid-content">
