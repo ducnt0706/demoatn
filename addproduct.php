@@ -88,7 +88,7 @@ if (isset($_POST['add'])) {
                 <?php
                 $query = "SELECT catid, name FROM catalogue";
                 $result = doQuery($query);
-                while ($row = mysqli_fetch_array($result)) {
+                foreach ($result as $row) {
                     $CaId = $row[0];
                     $CaName = $row[1];
                     echo "<option value='$CaId'>$CaName</option>";

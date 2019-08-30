@@ -29,7 +29,7 @@
         ?>
         <form action="index3.php" method="post" style="display: inline;">
             <input type="hidden" name="catid" value="<?php echo $caId ?>">
-            <input style="width:100px;" type="submit" value="<?php echo $caName ?>">
+            <input class="btn" style="width:100px;" type="submit" value="<?php echo $caName ?>">
         </form>
         <?php
         echo "</a></span>";
@@ -43,7 +43,7 @@
     <div style="color: white;position: relative;top:25%;left:5%">
         <h2>Bring the world of toys to your room!!</h2>
         <h5>Let us make your childhood become beautiful</h5>
-        <button>Buy Now!!</button>
+        <button class="btnspec">Buy Now!!</button>
     </div>
 </div>
 </div>

@@ -43,16 +43,34 @@
         <div style="color: white;position: relative;top:25%;left:5%">
             <h2>Bring the world of toys to your room!!</h2>
             <h5>Let us make your childhood become beautiful</h5>
-            <button>Buy Now!!</button>
+            <button class="btnspec">Buy Now!!</button>
         </div>
     </div>
 </div>
 
 <div class="beauti-content ">
-    <div class="mid-content"><h2>Best Seller!!!</h2></div>
+    <div class="mid-content"><h2>All Product!!!</h2></div>
+    <!--seach product form-->
+    <br><br>
+    <div class="mid-content">
+        <form action="loadproduct.php" method="post">
+            Search product:
+            <input type="search" name="keyword"/>
+            <input class="btnspec" type="submit" value="Go"/>
+        </form>
+    </div>
+    <br>
+    <!--load product-->
     <?php
-    $query = "SELECT id, name, avatar, price, status FROM item WHERE status='hot'";
+    //query load all product
+    $query = "SELECT id, name, avatar, price, status FROM item";
+    //query when search
+    if(isset($_POST['keyword'])){
+        $keyword = $_POST['keyword'];
+        $query = $query . " WHERE name LIKE '%$keyword%' OR id LIKE '%$keyword%'";
+    }
     $result = doQuery($query);
+
     foreach ($result as $r) {
     ?>
     <div class="card1 mid-content">
