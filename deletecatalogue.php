@@ -1,5 +1,4 @@
 <?php
-session_start();
 require_once './SetUp/functions.php';
 if (isset($_POST['CaId'])) {
     $CaId = $_POST['CaId'];

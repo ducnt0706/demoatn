@@ -1,3 +1,4 @@
+<!--header-->
 <!doctype html>
 <html lang="en">
 <head>
@@ -13,7 +14,7 @@
 require_once './SetUp/functions.php';
 ?>
 
-<!--header-->
+<!--nav-->
 <div class="nav">
     <!--postion make hide bar when small screen-->
 
@@ -33,11 +34,10 @@ require_once './SetUp/functions.php';
     </span>
 
     <span id="logintus">
-        <span>Chào <?php echo "AE"; ?></span>
-<span><img src="" alt=""></span>
+        <span>ATN MANAGEMENT</span>
 <span id="logincontent"><a href="logout.php">Log out</a></span>
-<span class="bar"><a href="index.php">ATN shop</a></span>
-</span>
+<span class="bar"><a href="index.php">ATN WEB</a></span>
+     </span>
 
 </div>
 
