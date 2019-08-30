@@ -22,17 +22,28 @@
 .bar a:hover{
     border-bottom: solid 2px orange;
 }
+.bardrop{
+    text-align: center;
+    text-decoration: none;
+    padding: 5px 5px;
+}
+.drop-content .bardrop:hover{
+    display: inline-block;
+}
 .drop-content {
     list-style-type: none;
     z-index: 1;
-    display: inline;
+    display: none;
 }
+
 .nameshop{
     font-family: 'Raleway', sans-serif;
     color: #e74c3c;
     font-size: large;
 }
-
+#logintus{
+    float: right;
+}
 /*row and column*/
 
 /* Create three equal columns that floats next to each other */
@@ -186,19 +197,22 @@
 
 .btn{
     border-radius: 2px;
-    font-size: 12px;
+    font-size: 16px;
     background-color: bisque;
     border: none;
     color: black;
     text-align: center;
     text-decoration: none;
+    padding: 5px;
 }
 .btnspec{
     border-radius: 12px;
-    font-size: 12px;
+    font-size: 16px;
     background-color: orange;
     border: none;
     color: black;
     text-align: center;
     text-decoration: none;
+    padding: 10px 20px;
+
 }

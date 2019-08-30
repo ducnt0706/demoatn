@@ -41,8 +41,8 @@
     <div class="column-header">
         <!---->
         <div style="color: white;position: relative;top:25%;left:5%">
-            <h2>Bring the world of toys to your room!!</h2>
-            <h5>Let us make your childhood become beautiful</h5>
+            <h2 style="font-size: xx-large">Bring the world of toys to your room!!</h2>
+            <h5 style="font-size: x-large">Let us make your childhood become beautiful</h5>
             <button class="btnspec">Buy Now!!</button>
         </div>
     </div>
@@ -53,7 +53,7 @@
     <!--seach product form-->
     <br><br>
     <div class="mid-content">
-        <form action="loadproduct.php" method="post">
+        <form action="index.php" method="post">
             Search product:
             <input type="search" name="keyword"/>
             <input class="btnspec" type="submit" value="Go"/>

@@ -61,6 +61,7 @@
     </div>
     <!--section showdata-->
     <div class="column-34">
+        <!--show name catalogue-->
         <div class="mid-content">
             <?php
             if(isset($_POST['catid'])){
@@ -75,9 +76,26 @@
 
             ?>
         </div>
+
+        <!--seach product form-->
+        <br><br>
+        <div class="mid-content">
+            <form action="index3.php" method="post">
+                Search product:
+                <input type="search" name="keyword"/>
+                <input class="btnspec" type="submit" value="Go"/>
+            </form>
+        </div>
+        <br>
+        <!--load product-->
         <?php
         if(isset($_POST['catid'])){
             $qry="SELECT name,avatar,status,price,content FROM item WHERE catid='$mscat'";
+            //query when search
+            if(isset($_POST['keyword'])){
+                $keyword = $_POST['keyword'];
+                $qry = $qry . " AND name LIKE '%$keyword%' OR id LIKE '%$keyword%'";
+            }
             $result=doQuery($qry);
             foreach ($result as $row){
                 $iname=$row['name'];
