@@ -29,7 +29,7 @@
         ?>
         <form action="index3.php" method="post" style="display: inline;">
             <input type="hidden" name="catid" value="<?php echo $caId ?>">
-            <input style="width:100px;" type="submit" value="<?php echo $caName ?>">
+            <input class="btn" style="width:100px;" type="submit" value="<?php echo $caName ?>">
         </form>
         <?php
         echo "</a></span>";

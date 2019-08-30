@@ -73,7 +73,7 @@ if (!$result){
                 <th>Options</th>
             </tr>
             <?php
-            while ($row = mysqli_fetch_array($result)) {
+            foreach ($result as $row) {
                 $CaId = $row[0];
                 $CaName = $row[1];
                 echo "<tr>";

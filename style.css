@@ -185,6 +185,20 @@
 }
 
 .btn{
-
+    border-radius: 2px;
+    font-size: 12px;
+    background-color: bisque;
+    border: none;
+    color: black;
+    text-align: center;
+    text-decoration: none;
 }
-
+.btnspec{
+    border-radius: 12px;
+    font-size: 12px;
+    background-color: orange;
+    border: none;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+}

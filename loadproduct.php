@@ -76,7 +76,7 @@ if (!$result){
             <th>Option</th>
         </tr>
         <?php
-        while ($row = mysqli_fetch_array($result)) {
+        foreach ($result as $row) {
             $ProID = $row[1];
             $ProName = $row[2];
             $ProPrice = $row[3];
