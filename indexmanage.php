@@ -25,8 +25,8 @@ require_once './SetUp/functions.php';
 <?php
 $msg="";
 if (isset($_POST['user'])) {
-    $user = $_POST['user'];
-    $pass = $_POST['pass'];
+    $user = sanitizeString($_POST['user']);
+    $pass = sanitizeString($_POST['pass']);
     $name="";
     if (empty($user)|| empty($pass)) {
         $msg = "Some field is empty!";
