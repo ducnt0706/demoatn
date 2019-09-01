@@ -28,23 +28,6 @@ function passwordToToken($password){
     $token=hash("ripemd128","$sal1$password$sal2");
     return $token;
 }
-//Security and prevent hacking
-function sanitizeString($str){
-    global $conn;
-    //remove html tags
-    $str=strip_tags($str);
-    //encode html (for special characters)
-    $str=htmlentities($str);
-
-    //don't use magic quotes
-    if(get_magic_quotes_gpc()){
-        $str=stripslashes($str);
-    }
-    //avoid MySQl injection
-    $str=$conn->real_escape_string($str);
-
-    return $str;
-}
 
 //function make User Account with token and prevent hacking
 function addAccount($name,$username,$password){
