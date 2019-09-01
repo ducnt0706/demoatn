@@ -43,7 +43,7 @@
         <div style="color: white;position: relative;top:25%;left:5%">
             <h2 style="font-size: xx-large">Bring the world of toys to your room!!</h2>
             <h5 style="font-size: x-large">Let us make your childhood become beautiful</h5>
-            <button  class="btnspec"><a href="#buycontent1">Buy Now!!</a></button>
+            <button  class="btnspec"><a href="#buycontent1"></a>Buy Now!!</button>
         </div>
     </div>
 </div>
