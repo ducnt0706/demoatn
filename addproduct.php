@@ -59,7 +59,7 @@ if (isset($_POST['add'])) {
         $parts = explode(".", $name);
         $lastIndex = count($parts) - 1;
         $extension = $parts[$lastIndex];
-        $ProImage = "$ProID.$extension";
+        $ProImage = "$name.$extension";
         $destination = "./images/$ProImage";
         //Move the file from temp loc => to our image folder
         move_uploaded_file($temp_name, $destination);
